@@ -10,5 +10,11 @@ int main() {
 	node1.GetConnections().at(0)->PrintLabel();
 	node2.GetConnections().at(0)->PrintLabel();
 
+	node1.SetLabel("Red");
+	node2.SetLabel("Blue");
+
+	node1.GetConnections().at(0)->PrintLabel();
+	node2.GetConnections().at(0)->PrintLabel();
+
 	return 0;
 }
