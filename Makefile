@@ -5,4 +5,4 @@ GraphNode.o: GraphNode.cpp GraphNode.h
 	g++ -c GraphNode.cpp GraphNode.h
 
 clean: 
-	rm *.o
+	rm *.{o,gch}
