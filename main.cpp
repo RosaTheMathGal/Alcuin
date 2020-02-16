@@ -1,4 +1,5 @@
 #include "GraphNode.h"
+#include "Graph.h"
 #include <iostream>
 
 int main() {
@@ -15,6 +16,15 @@ int main() {
 
 	node1.GetConnections().at(0)->PrintLabel();
 	node2.GetConnections().at(0)->PrintLabel();
+	
+	Graph graph1;
+	graph1.PrintGraph();
+
+	node1.SetLabel("1");
+	node2.SetLabel("-1");
+
+	graph1.AddNode(&node1);
+	graph1.PrintGraph();
 
 	return 0;
 }
