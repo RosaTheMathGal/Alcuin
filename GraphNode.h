@@ -7,11 +7,16 @@
 
 class GraphNode {
 	public:
-		GraphNode();
-		~GraphNode();
-		void AddConnection(GraphNode* connectedNode);
+		GraphNode() { label = "Just a little node!"; }
+		GraphNode(std::string label) { this->label = label; }
+		~GraphNode() { std::cout << label << " says goodnight!" << std::endl; }
+
+		void PrintLabel() { std::cout << label << std::endl; }
+		std::string GetLabel() const { return label; }
+		void SetLabel(std::string label) { this->label = label; }
+
 		std::vector<GraphNode*> GetConnections()  const { return connections; }
-		void SayName() { std::cout << label << std::endl; }
+		void AddConnection(GraphNode* connectedNode);
 
 	private:
 		std::string label;

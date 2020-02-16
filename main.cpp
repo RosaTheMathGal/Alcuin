@@ -7,8 +7,8 @@ int main() {
 
 	node1.AddConnection(&node2);
 
-	node1.GetConnections().at(0)->SayName();
-	node2.GetConnections().at(0)->SayName();
+	node1.GetConnections().at(0)->PrintLabel();
+	node2.GetConnections().at(0)->PrintLabel();
 
 	return 0;
 }
