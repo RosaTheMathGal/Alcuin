@@ -13,5 +13,15 @@ Plan of Action
 Graph files
 -----------
 
-Just some homemade roleout of networks/graphs (I\'ll call them
-NodeGraphs) \*\*
+Just some homemade roleout of networks/graphs (I\'ll call them Graphs,
+consiting of GraphNodes).
+
+### GraphNode
+
+Graph nodes need to know what other nodes they\'re connected to.
+
+Alcuin Files
+------------
+
+All the stuff related to solving the river problem. Note that finding
+the optimal solution is NP-Hard
