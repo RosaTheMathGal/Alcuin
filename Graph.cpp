@@ -25,12 +25,17 @@ void Graph::AddNode(GraphNode* node) {
  * symetric, only one node needs to add the other.
  * */
 void Graph::ConnectVerticies(GraphNode* node1, GraphNode* node2) {
+	bool node1IsInGraph = false;
+	bool node2IsInGraph = false;
 	for(int i = 0; i < verticies.size(); ++i) {
-		if(node1 == verticies.at(1) || node2 == verticies.at(1)) {
-			std::cout << "Error: at least one of the nodes is not part of the graph!" << std::endl;
-			return;
+		if(node1 == verticies.at(i)) {
+			node1IsInGraph = true;
+		}
+		if (node2 == verticies.at(i)) {
+			node2IsInGraph = true;
 		}
 	}
+	if(!(node1IsInGraph && node2IsInGraph)) return;
 	node1->AddConnection(node2);
 }
 

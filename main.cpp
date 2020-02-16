@@ -5,26 +5,16 @@
 int main() {
 	GraphNode node1;
 	GraphNode node2;
-
-	node1.AddConnection(&node2);
-
-	node1.GetConnections().at(0)->PrintLabel();
-	node2.GetConnections().at(0)->PrintLabel();
-
+	GraphNode node3("Green");
 	node1.SetLabel("Red");
 	node2.SetLabel("Blue");
+	node1.AddConnection(&node2);
 
-	node1.GetConnections().at(0)->PrintLabel();
-	node2.GetConnections().at(0)->PrintLabel();
-	
 	Graph graph1;
+	graph1.AddNode(&node2);
+	graph1.AddNode(&node3);
 	graph1.PrintGraph();
-
-	node1.SetLabel("1");
-	node2.SetLabel("-1");
-
-	graph1.AddNode(&node1);
-	graph1.PrintGraph();
+	graph1.ConnectVerticies(&node1, &node3);
 
 	return 0;
 }
