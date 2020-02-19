@@ -1,7 +1,7 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
-#include "GraphNode.h"
+#include "GraphVertex.h"
 #include <vector> // Yes, should be unnecessary
 
 class Graph {
@@ -9,15 +9,15 @@ class Graph {
 		Graph() {}
 		~Graph() {}
 
-		std::vector<GraphNode*> GetVerticies() const { return verticies; }
+		std::vector<GraphVertex*> GetVerticies() const { return verticies; }
 
-		void AddNode(GraphNode* node);
-		void ConnectVerticies(GraphNode* node1, GraphNode* node2);
+		void AddNode(GraphVertex* node);
+		void ConnectVerticies(GraphVertex* node1, GraphVertex* node2);
 		void PrintGraph();
 		void CleanGraph();
 
 	private:
-		std::vector<GraphNode*> verticies;
+		std::vector<GraphVertex*> verticies;
 };
 
 #endif

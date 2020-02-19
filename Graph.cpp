@@ -10,7 +10,7 @@
  * first vertex into the graph. If needed, you can use the GraphClean() function,
  * but it's very intensive!
  * */
-void Graph::AddNode(GraphNode* node) {
+void Graph::AddNode(GraphVertex* node) {
 	for(int i = 0; i < verticies.size(); ++i) {
 		if(node == verticies.at(i)) return;
 	}
@@ -24,7 +24,7 @@ void Graph::AddNode(GraphNode* node) {
  * an error if they needed to be added to the graph. Since adding edges is
  * symetric, only one node needs to add the other.
  * */
-void Graph::ConnectVerticies(GraphNode* node1, GraphNode* node2) {
+void Graph::ConnectVerticies(GraphVertex* node1, GraphVertex* node2) {
 	bool node1IsInGraph = false;
 	bool node2IsInGraph = false;
 	for(int i = 0; i < verticies.size(); ++i) {
@@ -41,7 +41,7 @@ void Graph::ConnectVerticies(GraphNode* node1, GraphNode* node2) {
 
 void Graph::PrintGraph() {
 	for(int i = 0; i < verticies.size(); ++i) {
-		GraphNode* vertex = verticies.at(i);
+		GraphVertex* vertex = verticies.at(i);
 		vertex->PrintLabel();
 	}
 }

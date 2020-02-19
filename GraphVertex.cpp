@@ -1,4 +1,4 @@
-#include "GraphNode.h"
+#include "GraphVertex.h"
 #include <iostream>
 
 /* All connections should be symetrical. Therefore, whenever a node is added
@@ -6,7 +6,7 @@
  * should be added to the collection list of the other. To avoid infinite
  * recursion, a flag is set so that the add-back will only happen once.
  * */
-void GraphNode::AddConnection(GraphNode* connectedNode) {
+void GraphVertex::AddConnection(GraphVertex* connectedNode) {
 	if(!connectedNode->originalAdder) {
 		originalAdder = true;
 

@@ -1,11 +1,11 @@
-#include "GraphNode.h"
+#include "GraphVertex.h"
 #include "Graph.h"
 #include <iostream>
 
 int main() {
-	GraphNode node1;
-	GraphNode node2;
-	GraphNode node3("Green");
+	GraphVertex node1;
+	GraphVertex node2;
+	GraphVertex node3("Green");
 	node1.SetLabel("Red");
 	node2.SetLabel("Blue");
 	node1.AddConnection(&node2);
